@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.uitstark.dailys_notes">
+
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM"></uses-permission>
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+
+    <application
+        tools:replace="android:appComponentFactory"
+
+        android:appComponentFactory="whateverString"
+
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+
+        android:allowBackup="true"
+        android:icon="@drawable/notes"
+        android:label=""
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".Activity.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".Activity.Login"></activity>
+
+        <activity android:name=".Activity.ListBirthdayActivity"></activity>
+
+        <activity android:name=".Activity.NewBirthdayActivity"></activity>
+
+        <activity android:name=".Activity.EditBirthdayActivity"></activity>
+
+        <activity android:name=".Activity.Register"></activity>
+
+        <activity android:name=".Activity.UserActivity"></activity>
+
+
+        <activity android:name=".Activity.ListNoteActivity" />
+        <activity android:name=".Activity.ToDoActivity" />
+        <activity android:name=".Activity.NoteActivity" />
+        <activity android:name=".Activity.ListToDoActivity" />
+        <activity android:name=".Activity.UpdateNoteActivity" />
+        <activity android:name=".Activity.UpdateToDoActivity" />
+        <activity android:name=".Activity.SettingActivity" />
+
+
+        <receiver android:name=".ServiceManage.AlarmReceiver"/>
+
+    </application>
+
+</manifest>
